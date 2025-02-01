@@ -1,11 +1,17 @@
 # camera_calibration
-毎回準備するのに時間かかるから自分用に
+毎回カメラキャリブレーションの準備をするのに時間かかるから自分用に
 
 ## 準備
 ### python環境構築
 
-### 必要なものインストール
+### クローン
+```bash
+git clone https://github.com/keigo1110/camera_calibration.git
+cd camera_calibration
 ```
+
+### 必要なライブラリをインストール
+```bash
 pip install -r requirements.txt
 ```
 
@@ -13,17 +19,65 @@ pip install -r requirements.txt
 `checkerboard.png`という名前のチェスボード画像を使用する。この画像を印刷して、キャリブレーション時に撮影用の対象物として使用する。
 
 ## キャリブレーション用の画像を撮影
-動画で自動でキャプチャされる\
-"q"キーで終了
+- 単眼カメラの場合
+```bash
+python capt_pin.py
 ```
-python take.py
+- 魚眼レンズの場合
+```bash
+python capt_fish.py
 ```
+
 ## キャリブレーション実行
-`calib.npz`ができる
+- 単眼カメラの場合
+```bash
+python calib_pin.py
 ```
-python carib.py
+- 魚眼レンズの場合
+```bash
+python calib_fish.py
 ```
-## 値の確認
+
+# Camera Calibration
+
+A repository for quickly setting up camera calibration to save preparation time.
+
+## Setup
+### Setting Up the Python Environment
+
+### Clone the Repository
+```bash
+git clone https://github.com/keigo1110/camera_calibration.git
+cd camera_calibration
 ```
-python check.py
+
+### Install Required Libraries
+
+```bash
+pip install -r requirements.txt
 ```
+
+### Preparing the Checkerboard
+A checkerboard image named `checkerboard.png` should be used. Print this image to use it as the target during calibration.
+
+## Capturing Calibration Images
+
+- **For a monocular camera:**
+  ```bash
+  python capt_pin.py
+  ```
+- **For a fisheye lens:**
+  ```bash
+  python capt_fish.py
+  ```
+
+## Running Calibration
+
+- **For a monocular camera:**
+  ```bash
+  python calib_pin.py
+  ```
+- **For a fisheye lens:**
+  ```bash
+  python calib_fish.py
+  ```

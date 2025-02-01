@@ -106,7 +106,7 @@ def main():
         elif key == ord('s'):
             # チェスボード検出済みかつシャープな画像であれば保存
             if found and not blurry:
-                filename = os.path.join(CONFIG["save_dir"], "calib_{:02d}.jpg".format(saved_count))
+                filename = os.path.join(CONFIG["save_dir"], "calib_{:02d}.png".format(saved_count))
                 # 生画像（raw_frame）を保存することで、オーバーレイが入らない画像を保存
                 cv2.imwrite(filename, raw_frame)
                 print("画像保存: {} (Focus: {:.2f})".format(filename, focus_measure))

@@ -8,7 +8,7 @@ import os
 # ====================================================
 CONFIG = {
     "image_dir": "calib_images",         # 撮影済み画像のディレクトリ
-    "image_format": "*.jpg",             # 対象画像のファイル形式
+    "image_format": "*.png",             # 対象画像のファイル形式
     "checkerboard_dims": (9, 6),         # チェスボードの内部角点数 (横, 縦)
     "square_size": 28.0,                 # チェスボード１マスの実寸（例：28.0 mm）
     "subpix_window_size": (3, 3),        # サブピクセル補正時の探索窓サイズ
